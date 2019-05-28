@@ -5,17 +5,20 @@ services:
     build:
       context: ./php-fpm
     volumes:
+      - ./server/db/reptichart_readings.db:/reptichart_readings.db
       - ./src/public_html:/var/www/html
       
   nginx:
     build:
       context: ./nginx
     volumes:
+      - ./server/db/reptichart_readings.db:/reptichart_readings.db
       - ./src/public_html:/var/www/html
     ports:
       - "80:80"
       - "443:443"
     volumes:
+      - ./server/db/reptichart_readings.db:/reptichart_readings.db
       - ./src/public_html:/var/www/html
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
       - ./nginx/sites/:/etc/nginx/sites-available
@@ -23,7 +26,6 @@ services:
       - ./nginx/logs:/var/log/nginx
     depends_on:
       - php-fpm
-
 
 
 
