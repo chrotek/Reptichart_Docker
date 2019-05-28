@@ -1,0 +1,44 @@
+body {
+	    background-image: url("../images/background.png");
+	    background-repeat: repeat;
+    }
+
+.bg-inverse {
+	    background-image: url("../images/dark_background.png");
+  	    background-repeat: repeat;
+    }
+
+h1,h2,h3,h4,h5,h6,p {
+         color: #999999;
+     }
+h1,h2,h3,h4,h5,h6 {
+	text-align: center;
+   }
+
+.center-float {
+    text-align: center;
+}
+
+.one-line {
+    overflow: hidden;
+    white-space: nowrap
+}
+
+.vertical-floating-box {
+    display: inline-block;
+    width: 95%;
+    height: 25%;
+    margin: 1.6%;
+    border: 3px solid #3c3c3c;  
+}
+
+.horizontal-floating-box {
+    display: inline-block;
+    width: 30%;
+    height: 15%;
+    margin: 0.83%;
+}
+
+.after-box {
+    border: 3px solid red; 
+}

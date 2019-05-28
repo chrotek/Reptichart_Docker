@@ -1,0 +1,15 @@
+.vertical-floating-box {
+    display: inline-block;
+    width: 45%;
+    height: 25%;
+    margin: 1.6%;
+    border: 3px solid #3c3c3c;  
+}
+.horizontal-floating-box {
+    display: inline-block;
+    width: 45%;
+    height: 55%;
+    margin: 0.02%;
+#    border: 3px solid #3c3c3c;
+
+}
