@@ -1,0 +1,11 @@
+2019/05/28 17:36:03 [emerg] 1#1: "daemon" directive is duplicate in /etc/nginx/nginx.conf:3
+2019/05/28 17:36:30 [emerg] 1#1: "daemon" directive is duplicate in /etc/nginx/nginx.conf:3
+2019/05/28 17:37:15 [error] 7#7: *1 directory index of "/var/www/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2019/05/28 17:38:12 [error] 7#7: *2 directory index of "/var/www/public_html/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET /public_html/ HTTP/1.1", host: "localhost"
+2019/05/28 17:41:04 [error] 8#8: *1 directory index of "/var/www/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2019/05/28 17:43:05 [error] 10#10: *1 directory index of "/var/www/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2019/05/28 17:44:05 [error] 9#9: *1 directory index of "/var/www/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2019/05/28 17:44:49 [error] 9#9: *2 directory index of "/var/www/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2019/05/28 17:45:05 [error] 9#9: *4 directory index of "/var/www/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2019/05/28 17:48:26 [error] 9#9: *1 directory index of "/var/www/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2019/05/28 17:51:55 [error] 8#8: *2 directory index of "/var/www/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
