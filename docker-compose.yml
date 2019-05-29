@@ -30,9 +30,6 @@ services:
     depends_on:
       - php-fpm
 
-
-
-
   server:
     build:
       context: /home/reptichart/Reptichart_Docker/server
