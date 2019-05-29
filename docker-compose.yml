@@ -1,32 +1,32 @@
 version: '3'
 
+context: /home/reptichart/Reptichart_Docker/
 services:
   php-fpm:
     build:
-      context: ./php-fpm
+      context: /home/reptichart/Reptichart_Docker/php-fpm
     volumes:
-      - ./server/db/reptichart_readings.db:/reptichart_readings.db
-      - ./server/config.ini:/var/www/html/includes/config.ini
-      - ./src/public_html:/var/www/html
-      - ./php-fpm/logs:/var/log/php
-      - ./php-fpm/php.ini:/usr/local/etc/php/php.ini
+      - /home/reptichart/Reptichart_Docker/server/db/reptichart_readings.db:/reptichart_readings.db
+      - /home/reptichart/Reptichart_Docker/server/config.ini:/var/www/html/includes/config.ini
+      - /home/reptichart/Reptichart_Docker/src/public_html:/var/www/html
+      - /home/reptichart/Reptichart_Docker/php-fpm/logs:/var/log/php
+      - /home/reptichart/Reptichart_Docker/php-fpm/php.ini:/usr/local/etc/php/php.ini
       
   nginx:
     build:
-      context: ./nginx
+      context: /home/reptichart/Reptichart_Docker/nginx
     volumes:
-      - ./server/db/reptichart_readings.db:/reptichart_readings.db
-      - ./src/public_html:/var/www/html
     ports:
       - "80:80"
       - "443:443"
     volumes:
-      - ./server/db/reptichart_readings.db:/reptichart_readings.db
-      - ./src/public_html:/var/www/html
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
-      - ./nginx/sites/:/etc/nginx/sites-available
-      - ./nginx/conf.d/:/etc/nginx/conf.d
-      - ./nginx/logs:/var/log/nginx
+      - /home/reptichart/Reptichart_Docker/server/db/reptichart_readings.db:/reptichart_readings.db
+      - /home/reptichart/Reptichart_Docker/src/public_html:/var/www/html
+      - /home/reptichart/Reptichart_Docker/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - /home/reptichart/Reptichart_Docker/nginx/sites/:/etc/nginx/sites-available
+      - /home/reptichart/Reptichart_Docker/nginx/conf.d/:/etc/nginx/conf.d
+      - /home/reptichart/Reptichart_Docker/nginx/logs:/var/log/nginx
+      - /home/reptichart/Reptichart_Docker/src/ssl:/ssl/
     depends_on:
       - php-fpm
 
@@ -35,9 +35,9 @@ services:
 
   server:
     build:
-      context: ./server
+      context: /home/reptichart/Reptichart_Docker/server
     volumes:
-      - ./server/db/reptichart_readings.db:/reptichart_readings.db
+      - /home/reptichart/Reptichart_Docker/server/db/reptichart_readings.db:/reptichart_readings.db
     ports:
         - "65432:65432"
         - "65433:65433"
