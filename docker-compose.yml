@@ -33,8 +33,9 @@ services:
 
 
 
-#  server:
-#
-#    volumes:
-#      - ./server/db/reptichart_readings.db:/reptichart_readings.db
-#
+  server:
+    build:
+      context: ./server
+    volumes:
+      - ./server/db/reptichart_readings.db:/reptichart_readings.db
+
