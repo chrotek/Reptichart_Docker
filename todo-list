@@ -1,0 +1,2 @@
+- configure sttic ip or have the config be updated
+- restart unless stopped in the compose file
