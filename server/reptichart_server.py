@@ -93,6 +93,7 @@ def open_listener(port):
                         process_reading(readingstring)
                     except Exception:
                         print('ERROR-PROCESSING-READING:' + format(readingstring))
+                        print(Exception)
                 else:
                     print('no data from', client_address)
                 break
@@ -125,4 +126,4 @@ while True:
     print("")
     print("Running " + str(threading.active_count()) + "threads\n")
     print(threading.enumerate())
-    time.sleep(1)
+    time.sleep(60)

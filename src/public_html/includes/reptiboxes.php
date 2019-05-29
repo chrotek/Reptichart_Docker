@@ -1,6 +1,6 @@
 
 <?php
-
+ini_set('date.timezone', 'Europe/London');
 function getvalue($name, $dbtype, $count){
     $_GET['name']="$name";
     $_GET['dbtype']="$dbtype";
@@ -34,7 +34,7 @@ foreach ($configini_array["reptiles"] as $value) {
     {
 	    	$alert_repti_time = "";
     } else {
-	    	$alert_repti_time = "<span style='color: #8b0000;'>".$repti_name_capi."'s readings are old! <br></span>";
+	    	$alert_repti_time = "<span style='color: #8b0000;'>".$repti_name_capi."'s readings are old! <br>".$now_time."</span>";
     }
     // Temp
     $repti_temp_formatted = "<span style='color: #00b200;'>".$repti_temp."</span>";

@@ -38,4 +38,10 @@ services:
       context: ./server
     volumes:
       - ./server/db/reptichart_readings.db:/reptichart_readings.db
-
+    ports:
+        - "65432:65432"
+        - "65433:65433"
+        - "65434:65434"
+        - "65435:65435"
+        - "65436:65436"
+        - "65437:65437"
