@@ -6,7 +6,10 @@ services:
       context: ./php-fpm
     volumes:
       - ./server/db/reptichart_readings.db:/reptichart_readings.db
+      - ./server/config.ini:/var/www/html/includes/config.ini
       - ./src/public_html:/var/www/html
+      - ./php-fpm/logs:/var/log/php
+      - ./php-fpm/php.ini:/usr/local/etc/php/php.ini
       
   nginx:
     build:
@@ -31,3 +34,7 @@ services:
 
 
 #  server:
+#
+#    volumes:
+#      - ./server/db/reptichart_readings.db:/reptichart_readings.db
+#
