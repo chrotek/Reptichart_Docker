@@ -1,9 +1,4 @@
-SOLVED:
-- configure static ip or have the config be updated
--- Solved by letting the script listen on all IP's - set it to 0.0.0.0
-
 TO DO :
-- restart unless stopped in the compose file
 - un-hardcode the volumes 
 - add certbot support
         - https://medium.com/@pentacent/nginx-and-lets-encrypt-with-docker-in-less-than-5-minutes-b4b8a60d3a71
