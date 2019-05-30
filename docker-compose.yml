@@ -4,6 +4,7 @@ services:
   php-fpm:
     build:
       context: /home/reptichart/Reptichart_Docker/php-fpm
+    restart: unless-stopped
     volumes:
       - /home/reptichart/Reptichart_Docker/server/db/reptichart_readings.db:/reptichart_readings.db
       - /home/reptichart/Reptichart_Docker/server/config.ini:/var/www/html/includes/config.ini
@@ -14,6 +15,7 @@ services:
   nginx:
     build:
       context: /home/reptichart/Reptichart_Docker/nginx
+    restart: unless-stopped
     volumes:
     ports:
       - "80:80"
@@ -32,6 +34,7 @@ services:
   server:
     build:
       context: /home/reptichart/Reptichart_Docker/server
+    restart: unless-stopped
     volumes:
       - /home/reptichart/Reptichart_Docker/server/db/reptichart_readings.db:/reptichart_readings.db
     ports:
