@@ -1,6 +1,5 @@
 version: '3'
 
-context: /home/reptichart/Reptichart_Docker/
 services:
   php-fpm:
     build:
