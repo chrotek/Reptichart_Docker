@@ -142,3 +142,8 @@ Stack trace:
   thrown in /var/www/html/includes/get_readings.php on line 9" while reading response header from upstream, client: 192.168.1.3, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "192.168.1.4"
 2019/05/29 20:09:11 [warn] 6#6: no resolver defined to resolve ocsp.int-x3.letsencrypt.org while requesting certificate status, responder: ocsp.int-x3.letsencrypt.org, certificate: "/ssl/fullchain.pem"
 2019/05/29 20:11:12 [warn] 6#6: no resolver defined to resolve ocsp.int-x3.letsencrypt.org while requesting certificate status, responder: ocsp.int-x3.letsencrypt.org, certificate: "/ssl/fullchain.pem"
+2019/05/30 19:46:31 [warn] 6#6: no resolver defined to resolve ocsp.int-x3.letsencrypt.org while requesting certificate status, responder: ocsp.int-x3.letsencrypt.org, certificate: "/ssl/fullchain.pem"
+2019/05/30 19:46:35 [error] 6#6: *4 FastCGI sent in stderr: "PHP message: PHP Warning:  SQLite3::query(): Unable to prepare statement: 1, no such table: reptichart_false_archive in /var/www/html/includes/get_readings.php on line 8PHP message: PHP Fatal error:  Uncaught Error: Call to a member function fetchArray() on bool in /var/www/html/includes/get_readings.php:9
+Stack trace:
+#0 {main}
+  thrown in /var/www/html/includes/get_readings.php on line 9" while reading response header from upstream, client: 192.168.1.1, server: chrotek.co.uk, request: "GET /includes/get_readings.php?name=false&dbtype=archive&count=false HTTP/2.0", upstream: "fastcgi://172.18.0.3:9000", host: "chrotek.co.uk", referrer: "https://chrotek.co.uk/graphs/"
