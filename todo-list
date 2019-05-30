@@ -1,5 +1,6 @@
-- configure sttic ip or have the config be updated
+- configure static ip or have the config be updated
 - restart unless stopped in the compose file
+- un-hardcode the volumes 
 - add certbot support
         - https://medium.com/@pentacent/nginx-and-lets-encrypt-with-docker-in-less-than-5-minutes-b4b8a60d3a71
 - 
